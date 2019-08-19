@@ -13,18 +13,20 @@ dotnet new webapi -n coreTDDApi
 
 ## add the projects to the solution file
 ```
-dotnet sln add **/**/*.csproj
+cd coreTDD
+dotnet sln add ./coreTDDUnit/coreTDDUnit.csproj
+dotnet sln add ./coreTDDApi/coreTDDApi.csproj
 ```
 
 ## add the reference to the classib project  
 ```
-dotnet add ./coreTDDTests/coreTDDTests.csproj reference ./coreTDDApi/coreTDDApi.csproj
+dotnet add ./coreTDDUnit/coreTDDUnit.csproj reference ./coreTDDApi/coreTDDApi.csproj
 ```
 
 ## Add Coverage collection
 ```
-dotnet add ./coreTDDTests/coreTDDTests.csproj package coverlet.msbuild 
-dotnet test /p:CollectCoverage=true
+dotnet add ./coreTDDUnit/coreTDDUnit.csproj package coverlet.msbuild 
+dotnet test coreTDDUnit/coreTDDUnit.csproj /p:CollectCoverage=true
 ```
 
 ## Sample Coverage

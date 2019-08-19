@@ -9,7 +9,8 @@ namespace coreTDDApi.DAO
     {
         public InfoName getLastName(string first)
         {
-            return new InfoName();
+            var result=new InfoName(first,"Not Found");
+            return result;
         }
     }
 }

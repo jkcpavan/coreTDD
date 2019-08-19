@@ -41,6 +41,15 @@ namespace coreTDDUnit
             var testctrlr=new LastNameDAO();
             Assert.IsType<InfoName>(testctrlr.getLastName("test"));
         }
+        [Fact]
+        public void Test_GetLastName_method_returnnotempty_dao()
+        {
+            var testctrlr=new LastNameDAO();
+            Assert.IsType<InfoName>(testctrlr.getLastName("test"));
+            Assert.NotNull(testctrlr.getLastName("test").FirstName);
+            Assert.NotNull(testctrlr.getLastName("test").LastName);
+            Assert.Equal("test",testctrlr.getLastName("test").FirstName);
+        }
         public void Dispose()
         {
         }
