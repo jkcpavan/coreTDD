@@ -55,9 +55,14 @@ Test execution time: 2.0129 Seconds
 +---------+--------+--------+--------+
 ```
 
-graph TD
-A[Christmas] -->|Get money| B(Go shopping)
-B --> C{Let me think}
-C -->|One| D[Laptop]
-C -->|Two| E[iPhone]
-C -->|Three| F[fa:fa-car Car]
+{{<mermaid align="left">}}
+graph LR;
+    A[CGX] --> B{Why AppTx}
+    B --> C[Big Monolith]
+    B --> D[Hard to scale up and down for Business Demands]
+    B --> E[Tightly coupled with Platform and services]
+    B --> F[Difficult to Introduce New Features]
+    B --> G[not Cloud Native]
+    B --> H[Deployment Downtime]
+{{< /mermaid >}}
+
