@@ -54,3 +54,10 @@ Test execution time: 2.0129 Seconds
 | Total   | 15.38% | 0%     | 25%    |
 +---------+--------+--------+--------+
 ```
+
+graph TD
+A[Christmas] -->|Get money| B(Go shopping)
+B --> C{Let me think}
+C -->|One| D[Laptop]
+C -->|Two| E[iPhone]
+C -->|Three| F[fa:fa-car Car]
